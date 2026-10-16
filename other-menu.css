@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #FFECD1;
+    --dark: #3E000C;
+    --gold: #B56A00;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--dark);
+    font-family: 'Jeju Gothic', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+.glow {
+    position: absolute;
+    width: 24rem;
+    height: 24rem;
+    background-color: var(--gold);
+    border-radius: 50%;
+    filter: blur(162px);
+    pointer-events: none;
+    z-index: -1;
+}
+.glow-1 { top: 15%; left: 50%; transform: translateX(-50%); }
+.glow-2 { top: 65%; left: 25%; }
+
+.navbar {
+    position: relative;
+    z-index: 10;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 24px;
+    font-family: 'Jeju Gothic', sans-serif;
+    font-size: 1.125rem;
+}
+.navbar a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.navbar a:hover {
+    color: var(--dark);
+}
+.nav-logo {
+    letter-spacing: 0.025em;
+}
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+@media (min-width: 768px) {
+    .navbar {
+        padding: 32px 64px;
+        font-size: 20px;
+    }
+    .nav-links {
+        gap: 32px;
+    }
+}
+
+.menu-section {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 64px 24px 32px;
+}
+.menu-section + .menu-section {
+    padding-top: 32px;
+    padding-bottom: 64px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+.section-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: var(--dark);
+    margin-bottom: 12px;
+}
+.section-title .first-letter {
+    font-family: 'Qwitcher Grypen', cursive;
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 0;
+    margin-right: 4px;
+}
+
+.section-desc {
+    font-family: 'Jeju Gothic', sans-serif;
+    max-width: 576px;
+    margin: 0 auto;
+    color: rgba(62, 0, 12, 0.8);
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(62, 0, 12, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(62, 0, 12, 0.15);
+}
+
+.item-image {
+    height: 224px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #e5e7eb;
+}
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+.item-image img:hover {
+    transform: scale(1.05);
+}
+
+.item-name {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+.item-desc {
+    font-family: 'Jeju Gothic', sans-serif;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: rgba(62, 0, 12, 0.7);
+    margin-bottom: 16px;
+}
+
+.item-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid rgba(62, 0, 12, 0.1);
+}
+.item-price {
+    font-family: 'Jeju Gothic', sans-serif;
+    font-weight: bold;
+    font-size: 1.125rem;
+    color: var(--gold);
+}
+.btn-order {
+    font-family: 'Jeju Gothic', sans-serif;
+    background-color: var(--dark);
+    color: var(--bg);
+    border: none;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn-order:hover {
+    background-color: var(--gold);
+}
+
+@media (min-width: 640px) {
+    .menu-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 768px) {
+    .menu-grid { grid-template-columns: repeat(3, 1fr); }
+    .section-title { font-size: 3rem; }
+    .section-title .first-letter { font-size: 5rem; }
+}
+@media (min-width: 1024px) {
+    .menu-grid { grid-template-columns: repeat(4, 1fr); }
+}
