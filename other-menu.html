@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Non-Coffee &amp; Snack - Kopi Ruang Kita</title>
+    <title>Menu - Kopi Ruang Kita</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&family=Jeju+Gothic&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="other-menu.css">
+    <script src="filter.js" defer></script>
 </head>
 <body>
 
@@ -17,26 +18,90 @@
     <div class="glow glow-2"></div>
 
     <nav class="navbar">
-        <a href="home.html" class="nav-logo">KOPI RUANG KITA</a>
+        <a href="index.html" class="nav-logo">KOPI RUANG KITA</a>
         <ul class="nav-links">
             <li><a href="about.html">ABOUT</a></li>
-            <li><a href="#non-coffee">MENU</a></li>
-            <li><a href="#snack">ORDER</a></li>
+            <li><a href="other-menu.html">MENU</a></li>
+            <li><a href="order.html">ORDER</a></li>
             <li><a href="contact.html">CONTACT</a></li>
         </ul>
     </nav>
 
-    <section id="non-coffee" class="menu-section">
+    <section id="menu" class="menu-section">
         <div class="section-header">
-            <h1 class="section-title"><span class="first-letter">N</span>on-Coffee</h1>
-            <p class="section-desc">Pilihan minuman segar tanpa kopi, tetap hangat dan nyaman untuk menemani ruang santaimu.</p>
+            <h1 class="section-title"><span class="first-letter">M</span>enu Kami</h1>
+            <p class="section-desc">Pilih kategori favoritmu, dari kopi, minuman segar tanpa kopi, sampai camilan untuk menemani ruang santaimu.</p>
+        </div>
+
+        <div class="filter-bar" role="group" aria-label="Filter kategori menu">
+            <button type="button" class="filter-btn active" data-category="all">Semua</button>
+            <button type="button" class="filter-btn" data-category="coffee">Coffee</button>
+            <button type="button" class="filter-btn" data-category="non-coffee">Non-Coffee</button>
+            <button type="button" class="filter-btn" data-category="snack">Snack</button>
         </div>
 
         <div class="menu-grid">
+
+            <div class="menu-item" data-category="coffee" data-name="Caffè Latte">
+                <div>
+                    <div class="item-image">
+                        <img src="kopi-1.jpg" alt="Caffè Latte" style="object-position: bottom;">
+                    </div>
+                    <h3 class="item-name">Caffè Latte</h3>
+                    <p class="item-desc">Perpaduan seimbang espresso kaya rasa dengan susu steamed lembut dan lapisan foam tipis.</p>
+                </div>
+                <div class="item-footer">
+                    <span class="item-price">Rp 28.000</span>
+                    <button class="btn-order">Pesan</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="coffee" data-name="Kopsu Ruang Kita">
+                <div>
+                    <div class="item-image">
+                        <img src="kopi-2.jpg" alt="Kopsu Ruang Kita" style="object-position: bottom;">
+                    </div>
+                    <h3 class="item-name">Kopsu Ruang Kita</h3>
+                    <p class="item-desc">Signature kopi susu gula aren dengan kepekatan espresso khas dan tekstur creamy.</p>
+                </div>
+                <div class="item-footer">
+                    <span class="item-price">Rp 25.000</span>
+                    <button class="btn-order">Pesan</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="coffee" data-name="Cappuccino">
+                <div>
+                    <div class="item-image">
+                        <img src="kopi-3.jpg" alt="Cappuccino" style="object-position: center;">
+                    </div>
+                    <h3 class="item-name">Cappuccino</h3>
+                    <p class="item-desc">Espresso klasik berpadu sempurna dengan microfoam tebal dan taburan bubuk kakao.</p>
+                </div>
+                <div class="item-footer">
+                    <span class="item-price">Rp 30.000</span>
+                    <button class="btn-order">Pesan</button>
+                </div>
+            </div>
+
+            <div class="menu-item" data-category="coffee" data-name="Iced Americano">
+                <div>
+                    <div class="item-image">
+                        <img src="kopi-4.jpg" alt="Iced Americano" style="object-position: bottom;">
+                    </div>
+                    <h3 class="item-name">Iced Americano</h3>
+                    <p class="item-desc">Double shot espresso segar dengan tambahan air dingin dan es batu, menyegarkan hari.</p>
+                </div>
+                <div class="item-footer">
+                    <span class="item-price">Rp 25.000</span>
+                    <button class="btn-order">Pesan</button>
+                </div>
+            </div>
+
             <div class="menu-item" data-category="non-coffee" data-name="Matcha Latte">
                 <div>
                     <div class="item-image">
-                        <img src="non-kopi-1.jpg" alt="Matcha Latte">
+                        <img src="non-kopi-1.jpg" alt="Matcha Latte" style="object-position: center;">
                     </div>
                     <h3 class="item-name">Matcha Latte</h3>
                     <p class="item-desc">Bubuk matcha premium berpadu susu segar, lembut dan sedikit manis dengan aroma khas teh hijau.</p>
@@ -50,7 +115,7 @@
             <div class="menu-item" data-category="non-coffee" data-name="Chocolate Signature">
                 <div>
                     <div class="item-image">
-                        <img src="non-kopi-2.jpg" alt="Chocolate Signature">
+                        <img src="non-kopi-2.jpg" alt="Chocolate Signature" style="object-position: center;">
                     </div>
                     <h3 class="item-name">Chocolate Signature</h3>
                     <p class="item-desc">Cokelat pekat yang dikocok dengan susu creamy, cocok untuk kamu yang suka rasa manis yang dalam.</p>
@@ -64,7 +129,7 @@
             <div class="menu-item" data-category="non-coffee" data-name="Red Velvet Latte">
                 <div>
                     <div class="item-image">
-                        <img src="non-kopi-3.jpg" alt="Red Velvet Latte">
+                        <img src="non-kopi-3.jpg" alt="Red Velvet Latte" style="object-position: center;">
                     </div>
                     <h3 class="item-name">Red Velvet Latte</h3>
                     <p class="item-desc">Susu dengan sirup red velvet yang manis lembut, disajikan dengan topping whipped cream.</p>
@@ -78,7 +143,7 @@
             <div class="menu-item" data-category="non-coffee" data-name="Lemon Tea">
                 <div>
                     <div class="item-image">
-                        <img src="non-kopi-4.jpg" alt="Lemon Tea">
+                        <img src="non-kopi-4.jpg" alt="Lemon Tea" style="object-position: center;">
                     </div>
                     <h3 class="item-name">Lemon Tea</h3>
                     <p class="item-desc">Teh hitam seduh dengan perasan lemon segar dan es batu, ringan dan menyegarkan.</p>
@@ -92,7 +157,7 @@
             <div class="menu-item" data-category="non-coffee" data-name="Strawberry Yogurt">
                 <div>
                     <div class="item-image">
-                        <img src="non-kopi-5.jpg" alt="Strawberry Yogurt">
+                        <img src="non-kopi-5.jpg" alt="Strawberry Yogurt" style="object-position: center;">
                     </div>
                     <h3 class="item-name">Strawberry Yogurt</h3>
                     <p class="item-desc">Yogurt dingin dengan stroberi asli, asam manis yang segar di setiap tegukan.</p>
@@ -103,20 +168,10 @@
                 </div>
             </div>
 
-        </div>
-    </section>
-
-    <section id="snack" class="menu-section">
-        <div class="section-header">
-            <h2 class="section-title"><span class="first-letter">S</span>nack</h2>
-            <p class="section-desc">Camilan hangat dan renyah, teman terbaik untuk berbagi cerita sambil menikmati minuman.</p>
-        </div>
-
-        <div class="menu-grid">
             <div class="menu-item" data-category="snack" data-name="Butter Croissant">
                 <div>
                     <div class="item-image">
-                        <img src="snack-1.jpg" alt="Butter Croissant">
+                        <img src="snack-1.jpg" alt="Butter Croissant" style="object-position: center;">
                     </div>
                     <h3 class="item-name">Butter Croissant</h3>
                     <p class="item-desc">Croissant berlapis dengan aroma mentega, renyah di luar dan lembut di dalam.</p>
@@ -130,7 +185,7 @@
             <div class="menu-item" data-category="snack" data-name="French Fries">
                 <div>
                     <div class="item-image">
-                        <img src="snack-2.jpg" alt="French Fries">
+                        <img src="snack-2.jpg" alt="French Fries" style="object-position: center;">
                     </div>
                     <h3 class="item-name">French Fries</h3>
                     <p class="item-desc">Kentang goreng renyah dengan bumbu gurih, disajikan bersama saus sambal dan mayones.</p>
@@ -144,7 +199,7 @@
             <div class="menu-item" data-category="snack" data-name="Roti Bakar Cokelat Keju">
                 <div>
                     <div class="item-image">
-                        <img src="snack-3.jpg" alt="Roti Bakar Cokelat Keju">
+                        <img src="snack-3.jpg" alt="Roti Bakar Cokelat Keju" style="object-position: center;">
                     </div>
                     <h3 class="item-name">Roti Bakar Cokelat Keju</h3>
                     <p class="item-desc">Roti tebal dipanggang hingga garing, diisi cokelat leleh dan parutan keju.</p>
@@ -158,7 +213,7 @@
             <div class="menu-item" data-category="snack" data-name="Pisang Goreng Madu">
                 <div>
                     <div class="item-image">
-                        <img src="snack-4.jpg" alt="Pisang Goreng Madu">
+                        <img src="snack-4.jpg" alt="Pisang Goreng Madu" style="object-position: center;">
                     </div>
                     <h3 class="item-name">Pisang Goreng Madu</h3>
                     <p class="item-desc">Pisang goreng tepung krispi dengan siraman madu, camilan klasik yang selalu cocok.</p>
@@ -172,7 +227,7 @@
             <div class="menu-item" data-category="snack" data-name="Chocolate Chip Cookies">
                 <div>
                     <div class="item-image">
-                        <img src="snack-5.jpg" alt="Chocolate Chip Cookies">
+                        <img src="snack-5.jpg" alt="Chocolate Chip Cookies" style="object-position: center;">
                     </div>
                     <h3 class="item-name">Chocolate Chip Cookies</h3>
                     <p class="item-desc">Cookies panggang dengan serpihan cokelat, renyah di tepi dan chewy di tengah.</p>
