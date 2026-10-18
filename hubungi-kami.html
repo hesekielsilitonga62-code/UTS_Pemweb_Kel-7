@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hubungi Kami | Kopi Ruang Kita</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Qwitcher Grypen & Jeju Gothic (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&family=Jeju+Gothic&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            krem: "#FFECD1",   // background
+            marun: "#3E000C",  // merah tua
+            bold: "#B56A00",   // glow
+          },
+          fontFamily: {
+            script: ["'Qwitcher Grypen'", "cursive"],
+            serif: ["'Times New Roman'", "Times", "serif"],
+            jeju: ["'Jeju Gothic'", "JejuGothic", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="flex min-h-screen flex-col bg-marun text-krem antialiased">
+
+  <!-- Navbar sederhana: kembali ke beranda -->
+  <header class="font-jeju mx-auto flex w-full max-w-[1440px] items-center justify-between px-6 py-8 text-lg md:px-16 md:text-[20px]">
+    <a href="index.html" class="tracking-wide">KOPI RUANG KITA</a>
+    <a href="index.html" class="hover:text-bold">Kembali ke beranda</a>
+  </header>
+
+  <!-- ================= HUBUNGI KAMI ================= -->
+  <main id="contact" class="flex-1">
+    <div class="mx-auto max-w-3xl px-6 py-12 md:py-20">
+
+      <div class="mb-10 text-center">
+        <h1 class="mb-3 font-serif text-[2.5rem] font-normal md:text-5xl">
+          <span class="font-script mr-1 text-[4.5rem] font-bold leading-[0] md:text-[5rem]">H</span>ubungi Kami
+        </h1>
+        <p class="font-jeju text-krem/80">Ada pertanyaan, saran, atau ingin memesan untuk acara? Tulis pesanmu di bawah ini.</p>
+      </div>
+
+      <form id="contactForm" novalidate class="font-jeju flex flex-col gap-6">
+
+        <div>
+          <label for="nama" class="mb-2 block">Nama</label>
+          <input type="text" id="nama" name="nama" placeholder="Nama lengkapmu"
+                 class="w-full rounded-lg border border-krem/30 bg-white/10 px-4 py-3 text-krem placeholder-krem/50 outline-none focus:border-bold" />
+          <p id="namaError" class="mt-1 hidden text-sm text-red-300"></p>
+        </div>
+
+        <div>
+          <label for="email" class="mb-2 block">Email</label>
+          <input type="email" id="email" name="email" placeholder="nama@email.com"
+                 class="w-full rounded-lg border border-krem/30 bg-white/10 px-4 py-3 text-krem placeholder-krem/50 outline-none focus:border-bold" />
+          <p id="emailError" class="mt-1 hidden text-sm text-red-300"></p>
+        </div>
+
+        <div>
+          <label for="pesan" class="mb-2 block">Pesan</label>
+          <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesanmu di sini..."
+                    class="w-full resize-y rounded-lg border border-krem/30 bg-white/10 px-4 py-3 text-krem placeholder-krem/50 outline-none focus:border-bold"></textarea>
+          <p id="pesanError" class="mt-1 hidden text-sm text-red-300"></p>
+        </div>
+
+        <button type="submit"
+                class="flex h-[50px] w-full items-center justify-center rounded-lg bg-krem text-[20px] text-marun transition hover:bg-bold hover:text-white sm:w-[200px]">
+          Kirim Pesan
+        </button>
+
+        <p id="formSuccess" class="hidden rounded-lg border border-krem/30 bg-white/10 px-4 py-3" role="status"></p>
+      </form>
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="font-jeju border-t border-krem/20 bg-marun text-krem">
+    <div class="mx-auto grid max-w-[1440px] gap-10 px-6 py-14 sm:grid-cols-2 md:px-16 lg:grid-cols-4">
+
+      <!-- Brand -->
+      <div>
+        <a href="index.html" class="text-xl tracking-wide">KOPI RUANG KITA</a>
+        <p class="mt-3 max-w-xs text-krem/70">Ruang santai dengan rasa yang menenangkan.</p>
+      </div>
+
+      <!-- Alamat -->
+      <div>
+        <h3 class="mb-3 font-serif text-2xl italic">Alamat</h3>
+        <p class="max-w-xs leading-relaxed text-krem/80">Jl. Kelompok No. 7, Medan, Sumatera Utara, Indonesia.</p>
+      </div>
+
+      <!-- Jam buka + kontak -->
+      <div>
+        <h3 class="mb-3 font-serif text-2xl italic">Jam Buka</h3>
+        <p class="text-krem/80">08.00 WIB - 22.00 WIB</p>
+
+        <h3 class="mb-3 mt-6 font-serif text-2xl italic">Kontak</h3>
+        <!-- TODO: ganti dengan nomor asli -->
+        <a href="tel:+620000000000" class="block text-krem/80 hover:text-bold">0812-0000-0000</a>
+        <a href="hubungi-kami.html" class="mt-3 inline-block rounded-lg border border-krem px-4 py-2 transition hover:bg-krem hover:text-marun">Hubungi Kami &#10132;</a>
+      </div>
+
+      <!-- Sosial media -->
+      <div>
+        <h3 class="mb-3 font-serif text-2xl italic">Sosial Media</h3>
+        <ul class="flex flex-col gap-3">
+          <li>
+            <a href="https://www.instagram.com/kopi_ruangkita" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-krem/80 hover:text-bold">
+              <img src="instagram-logo.svg" alt="" aria-hidden="true" class="h-6 w-6 brightness-0 invert" />
+              <span>Instagram: kopi_ruangkita</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com/@kopi_ruangkita" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-krem/80 hover:text-bold">
+              <img src="tiktok-logo.svg" alt="" aria-hidden="true" class="h-6 w-6 brightness-0 invert" />
+              <span>TikTok: kopi_ruangkita</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://x.com/kopi_ruangkita" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-krem/80 hover:text-bold">
+              <img src="x-logo.svg" alt="" aria-hidden="true" class="h-6 w-6 brightness-0 invert" />
+              <span>X: kopi_ruangkita</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="border-t border-krem/20 px-6 py-4 text-center text-sm text-krem/70">&copy; 2026 Kopi Ruang Kita</p>
+  </footer>
+
+  <script src="contact.js"></script>
+</body>
+</html>
