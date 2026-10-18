@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kopi Ruang Kita</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Qwitcher Grypen (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            krem: "#FFECD1",   // background
+            marun: "#3E000C",  // merah tua
+            bold: "#B56A00",   // glow
+          },
+          fontFamily: {
+            script: ["'Qwitcher Grypen'", "cursive"],
+            serif: ["'Times New Roman'", "Times", "serif"],
+            jeju: ["'Jeju Gothic'", "JejuGothic", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+
+  <!-- Jeju Gothic (Google Fonts) -->
+  <link href="https://fonts.googleapis.com/css2?family=Jeju+Gothic&display=swap" rel="stylesheet" />
+</head>
+
+<body class="bg-krem text-black antialiased">
+
+  <!-- ================= HERO ================= -->
+  <header class="relative overflow-hidden bg-krem min-h-[700px] lg:min-h-[940px]">
+
+    <!-- Glow bold (B56A00, blur 162 Figma = 81px CSS) -->
+    <img src="Vector 7.svg" alt="" aria-hidden="true"
+         class="pointer-events-none absolute bottom-0 left-0 w-full max-w-none translate-y-[-115px] blur-[37px]" />
+
+    <!-- Navbar -->
+    <nav class="font-jeju relative z-10 mx-auto flex max-w-[1440px] items-center justify-between px-6 py-8 text-lg md:px-16 md:text-[20px]">
+      <a href="index.html" class="tracking-wide">KOPI RUANG KITA</a>
+      <ul class="flex gap-5 md:gap-8">
+        <li><a href="about.html" class="hover:text-marun">ABOUT</a></li>
+        <li><a href="other-menu.html" class="hover:text-marun">MENU</a></li>
+        <li><a href="order.html" class="hover:text-marun">ORDER</a></li>
+        <li><a href="contact.html" class="hover:text-marun">CONTACT</a></li>
+      </ul>
+    </nav>
+
+    <!-- Konten hero -->
+    <div class="relative z-10 mx-auto flex max-w-[1440px] flex-col items-start px-6 pb-16 md:px-16 lg:flex-row lg:items-center lg:justify-between">
+
+      <!-- Teks -->
+      <div class="pt-6 lg:pt-0 lg:pr-4">
+       <h1 class="flex items-center font-serif italic lowercase leading-[1.02] text-[34px] sm:text-[56px] md:text-[92px]">
+  <span class="font-script not-italic normal-case leading-[0.8] -mr-1 md:-mr-4 text-[100px] sm:text-[150px] md:text-[241px] translate-y-[-70px]">R</span>
+
+  <span class="flex flex-col">
+    <span class="whitespace-nowrap">esapi rasa yang</span>
+
+    <!-- Baris ini bebas kamu atur sendiri -->
+    <span class="whitespace-nowrap translate-x-[50px] translate-y-[-25px]">penuh meruang</span>
+  </span>
+</h1>
+
+        <p class="font-jeju  mt-1 max-w-[677px] text-xl md:text-[30px] leading-snug translate-y-[-20px]">
+          Mari jelajahi setiap rasa yang bisa membawamu ke suasana ruang yang menenangkan
+        </p>
+
+        <div class="font-jeju mt-[-10px] flex gap-3">
+          <a href="#" class="flex h-[50px] w-[150px] items-center justify-center bg-marun text-2xl text-white transition hover:bg-bold md:text-[20px] rounded-lg">Menu</a>
+          <a href="#" class="flex h-[50px] w-[150px] items-center justify-center bg-marun text-2xl text-white transition hover:bg-bold md:text-[20px] rounded-lg">Pesan</a>
+        </div>
+      </div>
+
+      <!-- Gambar kopi -->
+      <img src="kopi hero.png" alt="Es kopi susu dengan biji kopi"
+           width="400" height="500"
+           class="mt-12 h-auto w-full max-w-[656px] shrink-0 object-contain lg:mt-0 lg:w-[540px] xl:w-[600px]" />
+    </div>
+  </header>
+
+  <!-- ================= TENTANG KAMI ================= -->
+  <section class="flex h-[300px] items-center justify-center bg-marun text-white md:h-[560px]">
+    <h2 class="flex items-center font-serif italic leading-[1.02] text-[34px] sm:text-[56px] md:text-[92px]">
+      <span class="font-script not-italic leading-[0.8] -mr-1 md:-mr-3 text-[100px] sm:text-[150px] md:text-[241px]">T</span>
+      <span>entang Kami</span>
+    </h2>
+  </section>
+
+  <!-- Area bawah (bagian teman satu tim) -->
+  <section class="min-h-[400px] bg-krem"></section>
+
+</body>
+</html>

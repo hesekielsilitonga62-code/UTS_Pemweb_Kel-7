@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami</title>
+    
+    <!-- CDN Tailwind CSS -->
+    <script src="https://tailwindcss.com"></script>
+
+    <!-- Import Font Khusus dari Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com/earlyaccess/jejugothic.css" rel="stylesheet">
+
+    <!-- Konfigurasi Animasi Kustom Tailwind -->
+    <style>
+        @keyframes fadeInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes fadeInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .animate-fade-left { animation: fadeInLeft 1.2s ease forwards; }
+        .animate-fade-right { animation: fadeInRight 1.2s ease forwards; }
+    </style>
+</head>
+<body class="bg-[#FFECD1] text-[#3E000C] overflow-x-hidden">
+
+    <!-- SECTION TENTANG KAMI -->
+    <section id="about" class="w-full">
+        <div class="max-w-[1200px] mx-auto px-5 py-20 flex flex-col md:flex-row items-center gap-12 md:gap-24">
+            
+            <!-- Konten Teks (Animasi dari Kiri) -->
+            <div class="flex-1 animate-fade-left">
+                <!-- Heading 1 dengan Efek Blur Shadow #B56A00 sebesar 162px dan kombinasi font -->
+                <h1 class="font-['Times_New_Roman'] text-6xl md:text-7xl text-[#3E000C] mb-6 flex items-baseline [text-shadow:0_0_162px_#B56A00]">
+                    <span class="font-['Qwitcher_Grypen'] text-8xl md:text-9xl font-bold mr-2 leading-none">T</span>entang Kami
+                </h1>
+                
+                <!-- Paragraf Penjelas (Menggunakan Jeju Gothic) -->
+                <div class="font-['Jeju_Gothic'] text-lg leading-relaxed text-justify space-y-5">
+                    <p>
+                        Selamat datang di kafe kami, tempat di mana aroma kopi berkualitas dan kenyamanan menyatu. 
+                        Kami berkomitmen untuk menyajikan biji kopi pilihan terbaik yang dipanggang dengan penuh dedikasi, 
+                        menciptakan cita rasa yang khas di setiap cangkir yang kami hidangkan.
+                    </p>
+                    <p>
+                        Lebih dari sekadar tempat minum kopi, kami hadir sebagai ruang bagi Anda untuk bersantai, 
+                        berbagi cerita, mencari inspirasi, atau sekadar menikmati waktu luang di tengah kesibukan hari.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Konten 2 Gambar Suasana (Animasi dari Kanan) -->
+            <div class="flex-1 flex flex-col sm:flex-row gap-6 animate-fade-right w-full">
+                <!-- Gambar 1 (Interior) -->
+                <div class="flex-1 bg-white p-3 rounded-xl shadow-[0_10px_162px_rgba(181,106,0,0.15)] transition-transform duration-300 hover:-translate-y-2">
+                    <img src="suasana1.jpeg" alt="Suasana interior kafe yang nyaman" class="w-full h-72 object-cover rounded-lg">
+                    <p class="font-['Jeju_Gothic'] font-bold text-center text-sm text-[#3E000C] mt-3">Interior Kafe yang Hangat</p>
+                </div>
+                
+                <!-- Gambar 2 (Outdoor) -->
+                <div class="flex-1 bg-white p-3 rounded-xl shadow-[0_10px_162px_rgba(181,106,0,0.15)] transition-transform duration-300 hover:-translate-y-2">
+                    <img src="suasana2.jpeg" alt="Area outdoor kafe" class="w-full h-72 object-cover rounded-lg">
+                    <p class="font-['Jeju_Gothic'] font-bold text-center text-sm text-[#3E000C] mt-3">Area Bersantai Outdoor</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
