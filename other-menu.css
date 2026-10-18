@@ -201,3 +201,35 @@ body {
 @media (min-width: 1024px) {
     .menu-grid { grid-template-columns: repeat(4, 1fr); }
 }
+/* ===== Tombol Filter Menu ===== */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+.filter-btn {
+    font-family: 'Jeju Gothic', sans-serif;
+    font-size: 0.95rem;
+    padding: 8px 22px;
+    border: 1px solid var(--dark);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--dark);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.filter-btn:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+.filter-btn.active {
+    background-color: var(--dark);
+    border-color: var(--dark);
+    color: var(--bg);
+}
+.filter-btn:focus-visible {
+    outline: 3px solid rgba(181, 106, 0, 0.4);
+    outline-offset: 2px;
+}
